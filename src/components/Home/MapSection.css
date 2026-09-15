@@ -1,0 +1,103 @@
+.map-section {
+    padding: 80px 8%;
+    background: #f8fafc;
+}
+
+
+.map-container {
+    width: 100%;
+}
+
+
+.fake-map {
+
+    height: 450px;
+    width: 100%;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+    linear-gradient(
+        45deg,
+        #e2e8f0 25%,
+        transparent 25%
+    ),
+    linear-gradient(
+        -45deg,
+        #e2e8f0 25%,
+        transparent 25%
+    ),
+    linear-gradient(
+        45deg,
+        transparent 75%,
+        #e2e8f0 75%
+    ),
+    linear-gradient(
+        -45deg,
+        transparent 75%,
+        #e2e8f0 75%
+    );
+
+    background-size:40px 40px;
+
+    background-position:
+    0 0,
+    0 20px,
+    20px -20px,
+    -20px 0px;
+
+}
+
+
+
+.map-overlay {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:white;
+
+    padding:30px 50px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+.map-overlay svg {
+
+    font-size:45px;
+
+    color:#2f80ed;
+
+}
+
+
+
+.map-overlay h3 {
+
+    margin:15px 0 10px;
+
+    color:#0f172a;
+
+}
+
+
+.map-overlay p {
+
+    color:#64748b;
+
+}

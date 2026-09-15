@@ -1,0 +1,109 @@
+{
+    "hero": {
+        "title": "Your Smile, Our Priority",
+        "description": "We provide high-quality dental care.",
+        "bookAppointment": "Book Appointment",
+        "ourServices": "Our Services"
+    },
+    "navbar": {
+        "home": "Home",
+        "services": "Our Services",
+        "about": "About Us",
+        "appointment": "Book Appointment"
+    },
+    "services": {
+        "subtitle": "Our Services",
+        "implants": {
+            "title": "Dental Implants",
+            "description": "Restore missing teeth with natural-looking and long-lasting implants."
+        },
+        "cleaning": {
+            "title": "Teeth Cleaning",
+            "description": "Professional cleaning to keep your teeth healthy and your smile bright."
+        },
+        "cosmetic": {
+            "title": "Cosmetic Dentistry",
+            "description": "Enhance your smile with advanced cosmetic dental treatments."
+        },
+        "orthodontics": {
+            "title": "Orthodontics",
+            "description": "Straighten your teeth and achieve a healthy, confident smile with modern orthodontic treatments."
+        },
+        "rootCanal": {
+            "title": "Root Canal Treatment",
+            "description": "Relieve tooth pain and save damaged teeth with professional root canal procedures."
+        },
+        "children": {
+            "title": "Children's Dentistry",
+            "description": "Gentle dental care designed to keep children's smiles healthy from an early age."
+        },
+        "generalDentistry": {
+            "title": "General Dentistry",
+            "description": "Comprehensive dental care to maintain your oral health."
+        }
+    },
+    "appointment": {
+        "title": "Book Your Appointment",
+        "description": "Fill in your details and our dental team will contact you soon.",
+        "firstName": "First Name  for example 'Mohamed Ahmed'",
+        "lastName": "Last Name",
+        "phone": "The mobile number must start with 05 and consist of 10 digits. ",
+        "select": "Select Service",
+        "button": "Book Appointment",
+        "phoneError": "Phone number must start with 05 and contain 10 digits.",
+        "successMessage": "Appointment booked successfully",
+        "serviceError": "Please select a service",
+        "firstNameError": "Please enter a valid first name",
+        "notes": "Notes",
+        "timeSlotTaken": "This time slot is already booked. Please choose another time.",
+        "errorMessage": "An error occurred while booking the appointment. Please try again."
+    },
+    "footer": {
+        "clinicName": "Dental Care Clinic",
+        "description": "We provide high-quality dental care with modern technology and a professional medical team to ensure your comfort and health.",
+        "quickLinks": "Quick Links",
+        "home": "Home",
+        "about": "About Us",
+        "services": "Our Services",
+        "doctors": "Doctors",
+        "appointment": "Book Appointment",
+        "contact": "Contact Us",
+        "ourServices": "Our Services",
+        "implants": "Dental Implants",
+        "cleaning": "Teeth Cleaning",
+        "cosmetic": "Cosmetic Dentistry",
+        "orthodontics": "Orthodontics",
+        "rootCanal": "Root Canal Treatment",
+        "contactUs": "Contact Us",
+        "phone": "+966 5X XXX XXXX",
+        "email": "info@clinic.com",
+        "address": "Riyadh, Saudi Arabia",
+        "copyright": "All rights reserved"
+    },
+    "map": {
+        "title": "Clinic Location",
+        "description": "Your clinic location will appear here"
+    },
+    "auth": {
+        "invalidCredentials": "Please check your email and password."
+    },
+    "about": {
+        "subtitle": "Professional Dental Clinic",
+        "title": "About Us",
+        "description": "We provide comprehensive dental care using advanced technologies and a highly experienced team of dentists. Our focus is on patient comfort, exceptional treatment quality, and creating healthy, confident smiles that last.",
+        "missionTitle": "Our Mission",
+        "mission": "To deliver high-quality dental care that combines advanced technology, professional expertise, and personalized attention for every patient.",
+        "visionTitle": "Our Vision",
+        "vision": "To become the trusted first choice for dental care through innovation, excellence, and long-term patient relationships.",
+        "stats": {
+            "experience": "Years of Experience",
+            "patients": "Happy Patients",
+            "satisfaction": "Patient Satisfaction",
+            "support": "Booking & Support",
+            "rating": "Clinic Rating",
+            "doctors": "Specialist Dentists",
+            "services": "Dental Services",
+            "certificates": "Certificates & Accreditations"
+        }
+    }
+}

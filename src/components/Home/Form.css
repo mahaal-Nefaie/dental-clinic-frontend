@@ -1,0 +1,102 @@
+.appointment {
+    padding: 80px 8%;
+    background: #f7fbff;
+}
+
+
+.form-container {
+
+    max-width: 600px;
+    margin: auto;
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+
+.form-container h2 {
+
+    text-align: center;
+
+    color:#24314f;
+
+    font-size: 2rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.form-container p {
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:30px;
+
+    line-height:1.7;
+
+}
+
+
+
+form {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+input,
+select {
+
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+
+input:focus,
+select:focus {
+
+    border-color:#2f80ed;
+
+    box-shadow:0 0 0 3px rgba(47,128,237,.15);
+}
+
+
+@media(max-width:600px){
+
+    .form-container{
+
+        padding:25px;
+
+    }
+
+}

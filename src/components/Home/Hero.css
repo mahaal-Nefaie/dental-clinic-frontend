@@ -1,0 +1,253 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    color: white;
+    padding: 80px 8%;
+}
+
+.hero-content h1 {
+    font-size: 3.7rem;
+    line-height: 1.15;
+    color:  #222;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    color: #222;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    font-size: 1rem;
+    background: rgba(185, 196, 204, 0.116); 
+    backdrop-filter: blur(10px); 
+    border-radius: 16px;
+   }
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-btn {
+    background: #2f80ed;
+    color: white;
+    border: none;
+    padding: 16px 34px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    background: #1967d2;
+}
+.secondary-btn-link {
+    text-decoration: none;
+}
+.primary-btn-link {
+    text-decoration: none;
+}
+
+/*.secondary-btn {
+    background: white;
+    color: #2f80ed;
+    border: 2px solid #2f80ed;
+    padding: 16px 34px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.secondary-btn:hover {
+    background: #2f80ed;
+    color: white;
+}*/
+.secondary-btn {
+    background: rgba(225, 234, 241, 0.541); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    color: #666; 
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+    padding: 16px 34px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.secondary-btn:hover {
+    color: #222;
+    border-color: #2f80ed; 
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-img img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% center;
+}
+
+
+.hero-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(160, 186, 224, 0.151);
+}
+
+
+
+
+@media (max-width: 992px) {
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-container {
+        height: 90vh;
+    }
+
+    .hero-img img {
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .hero-content {
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-top: 50px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-container {
+        height: 100vh;
+    }
+
+    .hero-img {
+        position: absolute;
+        height: 100%;
+    }
+
+    .hero-img img {
+        width: auto;
+        height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        object-position: 50% center;
+    }
+
+
+
+
+
+    .hero-content {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+    }
+
+
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+
+    .hero-content p {
+        font-size: .95rem;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+        width: 240px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero-container {
+        height: 85vh;
+    }
+
+    .hero-img img {
+        height: 85vh;
+        object-position: center;
+    }
+
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-content p {
+        font-size: .85rem;
+    }
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service__subtitle {
+  font-size: 42px;
+  color: #222;
+   font-weight: 700;
+  
+}

@@ -1,0 +1,62 @@
+.doctor-portal {
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: #f6f8fc;
+}
+
+.doctor-content {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-main {
+    width: 100%;
+
+    padding: 0 32px 40px;
+
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1000px) {
+
+    .doctor-main {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .doctor-portal {
+        display: block;
+    }
+
+    .doctor-content {
+        min-height: auto;
+    }
+
+    .doctor-main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .doctor-main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

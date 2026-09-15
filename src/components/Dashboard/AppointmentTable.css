@@ -1,0 +1,237 @@
+/* ================================
+   TABLE CONTAINER
+================================ */
+
+.appointment-table-container {
+    background: #ffffff;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 15px rgba(15, 23, 42, 0.025);
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.appointment-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 760px;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.appointment-table th {
+    padding: 14px 18px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    text-align: left;
+
+    font-size: 10.5px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+
+/* ================================
+   CELLS
+================================ */
+
+.appointment-table td {
+    padding: 16px 18px;
+
+    color: #475569;
+
+    font-size: 12.5px;
+
+    border-bottom: 1px solid #f0f2f5;
+
+    white-space: nowrap;
+}
+
+.appointment-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.appointment-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.appointment-table tbody tr:hover {
+    background: #f8faff;
+}
+
+
+/* ================================
+   DATE
+================================ */
+
+.table-date,
+.table-time {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.table-date {
+    color: #334155;
+
+    font-weight: 600;
+}
+
+.table-date svg {
+    color: #2563eb;
+}
+
+.table-time {
+    color: #64748b;
+}
+
+.table-time svg {
+    color: #94a3b8;
+}
+
+
+/* ================================
+   PATIENT
+================================ */
+
+.patient-name {
+    color: #1e293b;
+
+    font-weight: 650;
+}
+
+
+/* ================================
+   SERVICE
+================================ */
+
+.service-name {
+    max-width: 180px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ================================
+   STATUS SELECT
+================================ */
+
+.status-select {
+    min-width: 105px;
+
+    padding: 7px 27px 7px 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* Pending */
+
+.status-select.pending {
+    background: #fff7ed;
+
+    color: #c2410c;
+}
+
+
+/* Confirmed */
+
+.status-select.confirmed {
+    background: #ecfdf5;
+
+    color: #047857;
+}
+
+
+/* Completed */
+
+.status-select.completed {
+    background: #f5f3ff;
+
+    color: #7c3aed;
+}
+
+
+/* Cancelled */
+
+.status-select.cancelled {
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.empty-appointments {
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.empty-appointments svg {
+    margin-bottom: 12px;
+
+    color: #94a3b8;
+}
+
+.empty-appointments h3 {
+    margin: 0 0 5px;
+
+    color: #334155;
+
+    font-size: 14px;
+}
+
+.empty-appointments p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
