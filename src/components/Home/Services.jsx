@@ -28,39 +28,39 @@ function Services() {
                 <Cards
                     icon={<FaTooth />}
                     title={t("services.implants.title")}
-                    pragraph={t("services.implants.description")}
+                    paragraph={t("services.implants.description")}
                 />
 
 
                 <Cards
                     icon={<GiToothbrush />}
                     title={t("services.cleaning.title")}
-                    pragraph={t("services.cleaning.description")}
+                    paragraph={t("services.cleaning.description")}
                 />
 
 
                 <Cards
                     icon={<MdCleaningServices />}
                     title={t("services.cosmetic.title")}
-                    pragraph={t("services.cosmetic.description")}
+                    paragraph={t("services.cosmetic.description")}
                 />
 
                 <Cards
                     icon={<FaTeeth />}
                     title={t("services.orthodontics.title")}
-                    pragraph={t("services.orthodontics.description")}
+                    paragraph={t("services.orthodontics.description")}
                 />
                 <Cards
                     icon={<GiTooth />}
                     title={t("services.rootCanal.title")}
-                    pragraph={t("services.rootCanal.description")}
+                    paragraph={t("services.rootCanal.description")}
                 />
 
 
                 <Cards
                     icon={<FaChild />}
                     title={t("services.children.title")}
-                    pragraph={t("services.children.description")}
+                    paragraph={t("services.children.description")}
                 />
 
             </div>

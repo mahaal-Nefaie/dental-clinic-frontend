@@ -1,16 +1,7 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-
 import StatusCards from "../components/Dashboard/StatusCards";
 import AppointmentTable from "../components/Dashboard/AppointmentTable";
-
-import {
-    getCurrentDoctor,
-    getDoctorsAppointments,
-    updateAppointmentStatus
-} from "../services/api";
-
+import useDoctorDashboard from "../hooks/useDoctorDashboard";
 import {
     CalendarDays,
     Clock3,
@@ -23,87 +14,15 @@ import "./DoctorDashboard.css";
 
 function DoctorDashboard() {
 
-    const [appointments, setAppointments] = useState([]);
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(true);
+    const {
+        appointments,
+        upcomingAppointments,
+        loading,
+        loadError,
+        updateError,
+        handleStatusChange
+    } = useDoctorDashboard();
 
-
-    useEffect(() => {
-
-        const token = localStorage.getItem("token");
-
-        if (!token) {
-            setError("You are not logged in");
-            setLoading(false);
-            return;
-        }
-
-
-        const loadAppointments = async () => {
-
-            try {
-
-                const appointmentsData =
-                    await getDoctorsAppointments(token);
-
-                setAppointments(appointmentsData);
-
-            } catch (error) {
-
-                console.error(error);
-
-                setError("Unable to load appointments");
-
-            } finally {
-
-                setLoading(false);
-
-            }
-        };
-
-
-        loadAppointments();
-
-    }, []);
-
-
-    const handleStatusChange = async (
-        appointmentId,
-        newStatus
-    ) => {
-
-        const token = localStorage.getItem("token");
-
-        try {
-
-            const updatedAppointment =
-                await updateAppointmentStatus(
-                    appointmentId,
-                    newStatus,
-                    token
-                );
-
-
-            setAppointments(prevAppointments =>
-                prevAppointments.map(appointment =>
-                    appointment.appointmentId === appointmentId
-                        ? {
-                            ...appointment,
-                            status: updatedAppointment.status
-                        }
-                        : appointment
-                )
-            );
-
-        } catch (error) {
-
-            console.error(error);
-
-            setError(
-                "Unable to update appointment status"
-            );
-        }
-    };
 
 
     if (loading) {
@@ -115,22 +34,14 @@ function DoctorDashboard() {
     }
 
 
-    if (error) {
+    if (loadError) {
         return (
             <div className="dashboard-error">
-                {error}
+                {loadError}
             </div>
         );
     }
 
-
-    const upcomingAppointments =
-        appointments
-            .filter(
-                appointment =>
-                    appointment.status !== "COMPLETED"
-            )
-            .slice(0, 5);
 
 
     return (
@@ -139,6 +50,12 @@ function DoctorDashboard() {
             <StatusCards
                 appointments={appointments}
             />
+
+            {updateError && (
+                <div className="dashboard-error">
+                    {updateError}
+                </div>
+            )}
 
 
             <section className="dashboard-section">

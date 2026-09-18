@@ -1,40 +1,8 @@
-import { useEffect, useState } from "react";
 import "./DoctorPages.css";
-
-import {
-    getCurrentDoctor,
-} from "../../services/api";
-
+import useDoctorProfile from "../../hooks/useDoctorProfile";
 
 function DoctorProfile() {
-    const [doctor, setDoctor] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchDoctor = async () => {
-            try {
-                const token = localStorage.getItem("token");
-
-                if (!token) {
-                    throw new Error("No token found");
-                }
-
-                const doctorData = await getCurrentDoctor(token);
-
-                console.log("Doctor Data:", doctorData);
-
-                setDoctor(doctorData);
-            } catch (error) {
-                console.error("Error fetching doctor data:", error);
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchDoctor();
-    }, []);
+    const { doctor, loading, error } = useDoctorProfile();
 
     if (loading) {
         return (
@@ -69,9 +37,7 @@ function DoctorProfile() {
 
     return (
         <div className="simple-page">
-
             <div className="page-title">
-
                 <h2>Profile</h2>
 
                 <p>
@@ -89,11 +55,8 @@ function DoctorProfile() {
                 </p>
 
                 <p>
-                    Phone: {doctor.phone}
-                </p>
-
+                    Phone: {doctor.phone}</p>
             </div>
-
         </div>
     );
 }

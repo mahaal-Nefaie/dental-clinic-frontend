@@ -1,8 +1,8 @@
-//import "./Cards.css";
+import "./Cards.css";
 
 function Cards({ 
     title,
-    pragraph,
+    paragraph,
     icon,
  }) {
     return (
@@ -12,7 +12,7 @@ function Cards({
             </div>
 
             <h2>{title}</h2>
-            <p>{pragraph}</p>
+            <p>{paragraph}</p>
         </div>
     );
 }
