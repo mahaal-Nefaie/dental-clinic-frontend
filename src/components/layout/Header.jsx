@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { MdLanguage } from "react-icons/md";
-
+import { FaTooth } from "react-icons/fa";
 function Header() {
 
     const { t, i18n } = useTranslation();
@@ -21,7 +21,10 @@ function Header() {
         <>
             <header>
                 <div className="logo">
-                    SmileCare
+                    <div className="logo-icon">
+                        <FaTooth />
+                    </div>
+                    <span>SmileCare</span>
                 </div>
 
                 <div className="language-switch" onClick={toggleLanguage}>

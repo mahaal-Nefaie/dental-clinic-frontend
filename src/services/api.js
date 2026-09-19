@@ -205,3 +205,43 @@ export const markNotificationAsRead = async (
         throw new Error("Unable to mark notification as read");
     }
 };
+
+// =========================
+// Auth
+// =========================
+
+// تسجيل الدخول
+export const login = async (email, password) => {
+    const response = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            email,
+            password,
+        }),
+    });
+
+    const text = await response.text();
+
+    let data = {};
+
+    try {
+        data = text ? JSON.parse(text) : {};
+    } catch {
+        data = {};
+    }
+
+    if (!response.ok) {
+        const error = new Error(
+            data.message || text || "Invalid email or password"
+        );
+
+        error.status = response.status;
+
+        throw error;
+    }
+
+    return data;
+};

@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Input from "../components/Common/Input";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaTooth } from "react-icons/fa";
 import Button from "../components/Common/Button";
+import { login } from "../services/api";
+import { setToken } from "../utils/auth";
 import "./Login.css";
 
 function Login() {
@@ -22,36 +24,20 @@ function Login() {
         setError("");
 
         try {
-            const response = await fetch(
-                "http://localhost:8080/api/auth/login",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        email: formData.email,
-                        password: formData.password,
-                    }),
-                }
+            const data = await login(
+                formData.email,
+                formData.password
             );
 
-            const data = await response.json();
+            setToken(data.token);
 
-            if (response.ok) {
-                localStorage.setItem("token", data.token);
-
-                navigate("/doctor/dashboard");
-            }
-            else {
-                setError(
-                    data.message || "Invalid email or password"
-                );
-            }
-
+            navigate("/doctor/dashboard");
         } catch (error) {
             console.error("Login error:", error);
-            setError("Unable to connect to server");
+
+            setError(
+                error.message || "Unable to connect to server"
+            );
         }
     };
 
@@ -59,11 +45,20 @@ function Login() {
         <div className="login-page">
             <div className="login-card">
 
-                <h2>Welcome back</h2>
+                <div className="logo">
+                    <div className="logo-icon">
+                        <FaTooth />
+                    </div>
+                    <span>SmileCare</span>
+                </div>
 
-                <p>
-                    Enter your credentials to access your account.
-                </p>
+                <div className="login-header">
+                    <h2>Welcome back</h2>
+
+                    <p>
+                        Sign in to access your SmileCare account.
+                    </p>
+                </div>
 
                 <form onSubmit={handleLogin}>
 
@@ -85,10 +80,16 @@ function Login() {
                             setFormData={setFormData}
                         />
 
-                        <span
+                        <button
+                            type="button"
                             className="password-toggle"
                             onClick={() =>
                                 setShowPassword(!showPassword)
+                            }
+                            aria-label={
+                                showPassword
+                                    ? "Hide password"
+                                    : "Show password"
                             }
                         >
                             {showPassword ? (
@@ -96,7 +97,7 @@ function Login() {
                             ) : (
                                 <FaEye />
                             )}
-                        </span>
+                        </button>
 
                     </div>
 
@@ -111,6 +112,10 @@ function Login() {
                     </Button>
 
                 </form>
+
+                <div className="login-footer">
+                    <span>SmileCare Dental Clinic</span>
+                </div>
 
             </div>
         </div>
