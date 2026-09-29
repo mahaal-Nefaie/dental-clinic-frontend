@@ -56,7 +56,8 @@
         "firstNameError": "Please enter a valid first name",
         "notes": "Notes",
         "timeSlotTaken": "This time slot is already booked. Please choose another time.",
-        "errorMessage": "An error occurred while booking the appointment. Please try again."
+        "errorMessage": "An error occurred while booking the appointment. Please try again.",
+        "loading": "Booking appointment..."
     },
     "footer": {
         "clinicName": "Dental Care Clinic",

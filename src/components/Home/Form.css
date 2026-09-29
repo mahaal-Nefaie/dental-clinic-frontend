@@ -34,7 +34,7 @@
 
 
 
-.form-container p {
+/*.form-container p {
 
     text-align:center;
 
@@ -44,7 +44,7 @@
 
     line-height:1.7;
 
-}
+}*/
 
 
 
@@ -99,4 +99,10 @@ select:focus {
 
     }
 
+}
+.form-description {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+    line-height: 1.7;
 }

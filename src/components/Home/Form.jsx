@@ -35,7 +35,9 @@ function Form() {
 
             <div className="form-container">
                 <h2>{t("appointment.title")}</h2>
-                <p>{t("appointment.description")}</p>
+                <p className="form-description">
+                    {t("appointment.description")}
+                    </p>
 
                 <form onSubmit={handleSubmit}>
                     <Input
@@ -65,7 +67,7 @@ function Form() {
                     <Input
                         name="phone"
                         type="tel"
-                        placeholder={t("appointment.phone")}
+                        placeholder="05********"
                         formData={formData}
                         handleChange={handleChange}
                     />
